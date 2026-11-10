@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#F3F5F8</color>
+    <color name="blue">#1F6FB2</color>
+    <color name="body">#3C4858</color>
+    <color name="border">#D5DBE3</color>
+    <color name="card">#FFFFFF</color>
+    <color name="danger">#B3261E</color>
+    <color name="ic_launcher_background">#0B2A4A</color>
+    <color name="ink">#1A2433</color>
+    <color name="muted">#5F6B7A</color>
+    <color name="navy">#0B2A4A</color>
+    <color name="navy_dark">#071C33</color>
+    <color name="navy_light">#17406E</color>
+    <color name="plum">#6A4C93</color>
+    <color name="success">#1B7F4B</color>
+    <color name="track">#E3E8EF</color>
+    <color name="warning">#B26A00</color>
+    <color name="white">#FFFFFF</color>
+    <string name="absent">Absent</string>
+    <string name="add_class">Add Class</string>
+    <string name="add_course">Add Course</string>
+    <string name="add_student">Add Student</string>
+    <string name="all_students_will_be_notified">All students will be notified</string>
+    <string name="app_name">UniHub</string>
+    <string name="assignments">Assignments</string>
+    <string name="assignments_and_exams">Assignments and Exams</string>
+    <string name="attendance">Attendance</string>
+    <string name="attendance_tracker">Attendance Tracker</string>
+    <string name="calendar">Calendar</string>
+    <string name="class_routine">Class Routine</string>
+    <string name="class_routine_assignments_and_notices">Class Routine, Assignments and Notices</string>
+    <string name="classes_attended">Total Attended</string>
+    <string name="classes_today">Classes Today</string>
+    <string name="deadline">Deadline</string>
+    <string name="delete">Delete</string>
+    <string name="due_this_week">Due This Week</string>
+    <string name="end_time">End Time</string>
+    <string name="exams">Exams</string>
+    <string name="gcm_defaultSenderId" translatable="false">216157035349</string>
+    <string name="give_attendance_present">Give Attendance (Present)</string>
+    <string name="google_api_key" translatable="false">AIzaSyAJEK1l_DHB4Wuwi1hk2bGuGofscQc87Bs</string>
+    <string name="google_app_id" translatable="false">1:216157035349:android:4c24117c0ecd6f03062ddc</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAJEK1l_DHB4Wuwi1hk2bGuGofscQc87Bs</string>
+    <string name="google_storage_bucket" translatable="false">unihub-3a25a.firebasestorage.app</string>
+    <string name="group_chat">Group Chat</string>
+    <string name="hint_applies_to">Applies To</string>
+    <string name="hint_course_code">Course code</string>
+    <string name="hint_course_code_2">Course Code</string>
+    <string name="hint_course_title">Course title</string>
+    <string name="hint_cr_invitation_code">CR Invitation Code</string>
+    <string name="hint_day">Day</string>
+    <string name="hint_day_of_the_week">Day of the Week</string>
+    <string name="hint_details">Details</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_lab_group">Lab Group</string>
+    <string name="hint_message">Message</string>
+    <string name="hint_month">Month</string>
+    <string name="hint_offline_typing">Offline - typing is disabled</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_roll_number_2307001_2307123">Roll Number (2307001 - 2307123)</string>
+    <string name="hint_room">Room</string>
+    <string name="hint_search_students">Search by name or roll</string>
+    <string name="hint_search_teachers">Search by teacher name</string>
+    <string name="hint_teacher_name">Teacher Name</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_type_a_message">Type a message</string>
+    <string name="hint_year">Year</string>
+    <string name="i_am_the_class_representative">I am the Class Representative (CR)</string>
+    <string name="in_progress">In progress</string>
+    <string name="khulna_university_of_engineering_technology">Khulna University of Engineering &amp; Technology</string>
+    <string name="khulna_university_of_engineering_technology_2">Khulna University of Engineering &amp; Technology (KUET)</string>
+    <string name="kuet_website">KUET Website</string>
+    <string name="loading">Loading...</string>
+    <string name="logout">Logout</string>
+    <string name="mark_class_as_not_held">Mark Class as Not Held</string>
+    <string name="mute">Mute</string>
+    <string name="next_class">NEXT CLASS</string>
+    <string name="no_messages_yet_say_hello">No messages yet. Say hello!</string>
+    <string name="no_notices_have_been_posted">No notices have been posted.</string>
+    <string name="no_student_found">No student found.</string>
+    <string name="no_teacher_found">No teacher found.</string>
+    <string name="notices">Notices</string>
+    <string name="offline_add_bar">You are offline. Connect to the internet to continue.</string>
+    <string name="offline_attendance_bar">You are offline. Attendance needs an internet connection.</string>
+    <string name="offline_calendar_bar">You are offline. Holidays need an internet connection.</string>
+    <string name="offline_chat_bar">You are offline. Chat needs an internet connection.</string>
+    <string name="offline_edit_bar">You are offline. Connect to the internet to continue.</string>
+    <string name="offline_login_bar">You are offline. Sign in and registration need an internet connection.</string>
+    <string name="offline_main_bar">You are offline. Some features need an internet connection.</string>
+    <string name="offline_notices_bar">You are offline. Showing saved notices. Reconnect for the latest.</string>
+    <string name="offline_photo_bar">You are offline. Changing a picture needs an internet connection.</string>
+    <string name="offline_routine_bar">You are offline. Showing saved routine. Reconnect for the latest.</string>
+    <string name="offline_session_bar">You are offline. Some features need an internet connection.</string>
+    <string name="offline_tasks_bar">You are offline. Showing saved items. Reconnect for the latest.</string>
+    <string name="only_registered_students_are_listed">Only registered students are listed.</string>
+    <string name="post">Post</string>
+    <string name="post_notice">Post Notice</string>
+    <string name="posted_by_the_class_representative">Posted by the Class Representative</string>
+    <string name="present">Present</string>
+    <string name="project_id" translatable="false">unihub-3a25a</string>
+    <string name="public_holidays_are_marked_in">Public holidays are red; holidays set by the CR are purple</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
+    <string name="services">Services</string>
+    <string name="start_time">Start Time</string>
+    <string name="students">Students</string>
+    <string name="students_and_cr_live">Students and CR, live</string>
+    <string name="summary">Summary</string>
+    <string name="teachers">Teachers</string>
+    <string name="text">&lt;</string>
+    <string name="text_2">></string>
+    <string name="text_3">-</string>
+    <string name="this_class_is_repeated_every">This class is repeated every week</string>
+    <string name="time">Time</string>
+    <string name="today">Today</string>
+    <string name="today_s_date">TODAY\'S DATE</string>
+    <string name="unihub">UniHub</string>
+    <string name="weekly_schedule_sunday_to_thursday">Weekly schedule, Sunday to Thursday</string>
+    <style name="BodyText">
+        <item name="android:textColor">@color/body</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Card">
+        <item name="android:background">@drawable/bg_card</item>
+        <item name="android:padding">16dp</item>
+    </style>
+    <style name="DeleteText">
+        <item name="android:textColor">@color/danger</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="Header">
+        <item name="android:background">@color/navy</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">36dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+    <style name="HeaderSub">
+        <item name="android:textColor">#CFE0F2</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="HeaderTitle">
+        <item name="android:fontFamily">serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="MetaText">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="OfflineBar">
+        <item name="android:background">@color/danger</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="TagText">
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Theme.UniHub" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorPrimaryVariant">@color/navy_dark</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/muted</item>
+        <item name="android:statusBarColor">@color/navy_dark</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="materialButtonStyle">@style/Widget.UniHub.Button</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+    <style name="TitleText">
+        <item name="android:textColor">@color/ink</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.UniHub.Button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">4dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/calendar" />
+        <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/public_holidays_are_marked_in" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_calendar_bar" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="10dp">
+            <LinearLayout style="@style/Card" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_margin="4dp" android:orientation="vertical">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:gravity="center_vertical" android:orientation="horizontal">
+                    <TextView android:id="@+id/btnPrev" android:layout_width="48dp" android:layout_height="48dp"
+                        android:gravity="center" android:text="@string/text" android:textColor="@color/ink"
+                        android:textSize="22sp" android:textStyle="bold" android:clickable="true" android:focusable="true" />
+                    <TextView android:id="@+id/tvMonth" style="@style/TitleText" android:layout_width="0dp"
+                        android:layout_height="wrap_content" android:layout_weight="1" android:gravity="center" />
+                    <TextView android:id="@+id/btnNext" android:layout_width="48dp" android:layout_height="48dp"
+                        android:gravity="center" android:text="@string/text_2" android:textColor="@color/ink"
+                        android:textSize="22sp" android:textStyle="bold" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+                <GridLayout android:id="@+id/grid" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:columnCount="7" />
+            </LinearLayout>
+            <TextView android:id="@+id/tvDate" style="@style/TitleText" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginStart="6dp"
+                android:layout_marginTop="14dp" />
+            <LinearLayout android:id="@+id/list" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/teachers" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_edit_bar" />
+    <com.google.android.material.button.MaterialButton android:id="@+id/btnAddCard"
+        style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_margin="14dp" android:layout_marginBottom="0dp"
+        android:text="@string/add_course" android:visibility="gone" />
+    <!-- search by teacher name -->
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutSearch"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginStart="14dp" android:layout_marginEnd="14dp" android:layout_marginTop="12dp"
+        android:hint="@string/hint_search_teachers" app:endIconMode="clear_text">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etSearch"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="textPersonName" android:imeOptions="actionSearch" android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView android:id="@+id/tvCount" style="@style/MetaText" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginStart="18dp" android:layout_marginTop="6dp" />
+    <TextView android:id="@+id/tvEmpty" style="@style/BodyText" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:padding="24dp"
+        android:text="@string/no_teacher_found" android:visibility="gone" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/list" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical" android:padding="10dp" />
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:orientation="vertical">
+            <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/group_chat" />
+            <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/students_and_cr_live" />
+        </LinearLayout>
+        <TextView android:id="@+id/btnMute" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/bg_outline_white" android:clickable="true" android:focusable="true"
+            android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="8dp" android:paddingBottom="8dp"
+            android:text="@string/mute" android:textColor="@color/white" android:textSize="13sp" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_chat_bar" />
+    <TextView android:id="@+id/tvEmpty" style="@style/MetaText" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:padding="24dp"
+        android:text="@string/no_messages_yet_say_hello" android:textSize="15sp" android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:paddingTop="6dp" android:paddingBottom="6dp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/card" android:gravity="center_vertical" android:orientation="horizontal"
+        android:padding="8dp">
+        <EditText android:id="@+id/etMessage" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:hint="@string/hint_type_a_message" android:inputType="textMultiLine|textCapSentences"
+            android:maxLength="500" android:maxLines="4" android:padding="10dp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSend"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" android:text="@string/send" />
+    </LinearLayout>
+</LinearLayout>

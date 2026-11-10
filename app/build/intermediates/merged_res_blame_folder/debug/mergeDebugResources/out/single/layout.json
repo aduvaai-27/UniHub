@@ -1,0 +1,114 @@
+[
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_tile.xml",
+        "source": "com.unihub.app-main-42:/layout/item_tile.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_upcoming.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_upcoming.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_notice.xml",
+        "source": "com.unihub.app-main-42:/layout/item_notice.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_day_head.xml",
+        "source": "com.unihub.app-main-42:/layout/item_day_head.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_add_task.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_add_task.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_stat.xml",
+        "source": "com.unihub.app-main-42:/layout/item_stat.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/dialog_notice.xml",
+        "source": "com.unihub.app-main-42:/layout/dialog_notice.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_login.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_teachers.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_teachers.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_students.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_students.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_chat.xml",
+        "source": "com.unihub.app-main-42:/layout/item_chat.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_chat.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_chat.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_routine.xml",
+        "source": "com.unihub.app-main-42:/layout/item_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_calendar.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_calendar.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_teacher.xml",
+        "source": "com.unihub.app-main-42:/layout/item_teacher.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_session.xml",
+        "source": "com.unihub.app-main-42:/layout/item_session.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_class_change.xml",
+        "source": "com.unihub.app-main-42:/layout/item_class_change.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_photo_view.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_photo_view.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_main.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_attendance.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_attendance.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_routine.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_add_routine.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_add_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_notices.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_notices.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_tasks.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_tasks.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_holiday.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_holiday.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_task.xml",
+        "source": "com.unihub.app-main-42:/layout/item_task.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/activity_class_change.xml",
+        "source": "com.unihub.app-main-42:/layout/activity_class_change.xml"
+    },
+    {
+        "merged": "com.unihub.app-mergeDebugResources-39:/layout/item_student.xml",
+        "source": "com.unihub.app-main-42:/layout/item_student.xml"
+    }
+]

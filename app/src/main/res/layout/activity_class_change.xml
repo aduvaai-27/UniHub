@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Class Changes" />
+        <TextView style="@style/HeaderSub" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Extra class or class cancellation for one date" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_add_bar" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- step 1: what to do -->
+            <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="1. What do you want to do?" android:textStyle="bold" />
+            <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/toggleMode"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp"
+                app:singleSelection="true" app:selectionRequired="true">
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnModeExtra"
+                    style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="Extra Class" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnModeCancel"
+                    style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                    android:layout_height="wrap_content" android:layout_weight="1" android:text="Class Cancellation" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+            <!-- step 2: date -->
+            <LinearLayout android:id="@+id/stepDate" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="18dp" android:visibility="gone">
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="2. Pick the date" android:textStyle="bold" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnDate"
+                    style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Select date" />
+                <TextView android:id="@+id/tvDateInfo" style="@style/BodyText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:visibility="gone" />
+            </LinearLayout>
+
+            <!-- step 3: section / group -->
+            <LinearLayout android:id="@+id/stepScope" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="18dp" android:visibility="gone">
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="3. For which section or group?" android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:hint="Section / group">
+                    <AutoCompleteTextView android:id="@+id/acScope" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <!-- step 4: the routine of that day -->
+            <LinearLayout android:id="@+id/stepClasses" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="18dp" android:visibility="gone">
+                <TextView android:id="@+id/tvListTitle" style="@style/MetaText" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:textStyle="bold" />
+                <TextView android:id="@+id/tvNoClasses" style="@style/MetaText" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp" android:visibility="gone" />
+                <LinearLayout android:id="@+id/listClasses" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- Extra Class form -->
+            <LinearLayout android:id="@+id/formExtra" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="20dp" android:visibility="gone">
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="New extra class" android:textStyle="bold" />
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" android:hint="@string/hint_course_code">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCourse"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="Class type" android:textStyle="bold" />
+            <RadioGroup android:id="@+id/rgType" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbTheory" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Theory" />
+                <RadioButton android:id="@+id/rbSessional" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Sessional" />
+            </RadioGroup>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:hint="@string/hint_teacher_name">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTeacher"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp" android:hint="@string/hint_room">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRoom"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="@string/start_time" android:textStyle="bold" />
+                <com.unihub.app.view.TimeWheel android:id="@+id/twStart"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" android:text="@string/end_time" android:textStyle="bold" />
+                <com.unihub.app.view.TimeWheel android:id="@+id/twEnd"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                    android:layout_width="match_parent" android:layout_height="52dp"
+                    android:layout_marginTop="22dp" android:text="Add Extra Class" android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

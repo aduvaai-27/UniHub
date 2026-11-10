@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark mode palette. Header navy stays dark; surfaces, borders and text are swapped. -->
+<resources>
+    <color name="navy">#0E2742</color>
+    <color name="navy_dark">#081A2E</color>
+    <color name="navy_light">#1B4A7A</color>
+    <color name="blue">#4F9BE0</color>
+    <color name="bg">#0F151C</color>
+    <color name="card">#18212B</color>
+    <color name="border">#2B3744</color>
+    <color name="track">#2B3744</color>
+    <color name="ink">#E7ECF2</color>
+    <color name="body">#C5CEDA</color>
+    <color name="muted">#94A1B1</color>
+</resources>

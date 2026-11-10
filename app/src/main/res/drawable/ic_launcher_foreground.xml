@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launcher icon foreground: the UniHub logo (@drawable/unihub_logo), inset so the adaptive-icon mask does not cut it. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/unihub_logo"
+    android:insetLeft="16%" android:insetTop="16%" android:insetRight="16%" android:insetBottom="16%" />

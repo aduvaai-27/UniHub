@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "Next 7 Days": opened from the Next Class card of the home screen. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Next 7 Days" />
+        <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="You are offline. Showing the last saved routine." />
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+            <TextView android:id="@+id/tvLoading" style="@style/MetaText" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="Loading the routine..." />
+            <LinearLayout android:id="@+id/list" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

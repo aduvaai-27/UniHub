@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#0B0F14" android:orientation="vertical">
+
+    <!-- top bar: name and Close -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical" android:orientation="horizontal"
+        android:paddingStart="20dp" android:paddingEnd="8dp" android:paddingTop="36dp" android:paddingBottom="8dp">
+        <TextView android:id="@+id/tvTitle" style="@style/HeaderTitle"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:singleLine="true" android:ellipsize="end" />
+        <TextView android:id="@+id/btnClose" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:padding="12dp" android:text="Close" android:textColor="@color/white"
+            android:textStyle="bold" android:clickable="true" android:focusable="true" />
+    </LinearLayout>
+
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_photo_bar" />
+
+    <!-- the big picture; tap anywhere on it to close -->
+    <FrameLayout android:id="@+id/frame" android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:clickable="true" android:focusable="true">
+        <ImageView android:id="@+id/photo" android:layout_width="match_parent" android:layout_height="match_parent"
+            android:padding="12dp" android:scaleType="fitCenter"
+            android:contentDescription="Profile picture" />
+        <ProgressBar android:id="@+id/progress" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_gravity="center" android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:padding="8dp" />
+
+    <!-- only for people who may change this picture (own picture, or any picture for the CR) -->
+    <LinearLayout android:id="@+id/editBar" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:padding="16dp" android:visibility="gone">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnChange"
+            android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1"
+            android:layout_marginEnd="8dp" android:text="Add photo" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnRemove"
+            style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp" android:layout_height="52dp"
+            android:layout_weight="1" android:layout_marginStart="8dp" android:text="Remove photo"
+            android:textColor="@color/white" app:strokeColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>

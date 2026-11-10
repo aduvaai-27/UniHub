@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true" android:scrollbars="none">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingBottom="22dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center_vertical" android:orientation="horizontal">
+                <ImageView android:layout_width="52dp" android:layout_height="52dp"
+                    android:src="@drawable/unihub_logo" android:contentDescription="UniHub logo" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical">
+                    <TextView style="@style/HeaderTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/unihub" android:textSize="30sp" />
+                    <TextView style="@style/HeaderSub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/khulna_university_of_engineering_technology_2" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" android:gravity="center_vertical">
+                <!-- your own picture: tap to see it big (and change it) -->
+                <com.unihub.app.view.AvatarView android:id="@+id/avatar" android:layout_width="60dp"
+                    android:layout_height="60dp" android:layout_marginEnd="14dp"
+                    android:contentDescription="Your profile picture, tap to enlarge" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/tvWelcome" style="@style/HeaderTitle"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:id="@+id/tvRole" style="@style/HeaderSub"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <!-- dark / light icon sits above the Logout button -->
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp" android:orientation="vertical" android:gravity="end">
+                    <ImageView android:id="@+id/btnTheme" android:layout_width="40dp" android:layout_height="40dp"
+                        android:layout_marginBottom="8dp" android:background="@drawable/bg_outline_white" android:padding="9dp"
+                        android:contentDescription="Switch between dark and light mode"
+                        android:clickable="true" android:focusable="true" />
+                    <TextView android:id="@+id/btnLogout" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:background="@drawable/bg_outline_white"
+                        android:paddingStart="14dp" android:paddingEnd="14dp" android:paddingTop="8dp"
+                        android:paddingBottom="8dp" android:text="@string/logout" android:textColor="@color/white"
+                        android:textStyle="bold" android:clickable="true" android:focusable="true" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout android:id="@+id/cardNext" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="18dp" android:orientation="vertical"
+                android:background="@drawable/bg_panel" android:padding="16dp"
+                android:clickable="true" android:focusable="true">
+                <TextView android:id="@+id/tvNextLabel" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/next_class" android:textColor="#9FBAD6" android:textSize="11sp"
+                    android:textStyle="bold" android:letterSpacing="0.12" />
+                <TextView android:id="@+id/tvNextTitle" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="4dp"
+                    android:text="@string/loading" android:textColor="@color/white" android:textSize="18sp" android:textStyle="bold" />
+                <TextView android:id="@+id/tvNextMeta" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp"
+                    android:textColor="#CFE0F2" android:textSize="14sp" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="Tap to see the next 7 days"
+                    android:textColor="#9FBAD6" android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/offline_main_bar" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="12dp">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout style="@style/Card" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                    <TextView android:id="@+id/tvStatToday" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/text_3" android:textColor="@color/ink"
+                        android:textSize="24sp" android:textStyle="bold" />
+                    <TextView style="@style/MetaText" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/classes_today" />
+                </LinearLayout>
+                <LinearLayout style="@style/Card" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                    <TextView android:id="@+id/tvStatDue" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/text_3" android:textColor="@color/ink"
+                        android:textSize="24sp" android:textStyle="bold" />
+                    <TextView style="@style/MetaText" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/due_this_week" />
+                </LinearLayout>
+                <LinearLayout style="@style/Card" android:layout_width="0dp" android:layout_height="match_parent"
+                    android:layout_weight="1" android:layout_margin="4dp" android:orientation="vertical">
+                    <TextView android:id="@+id/tvStatAtt" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/text_3" android:textColor="@color/ink"
+                        android:textSize="24sp" android:textStyle="bold" />
+                    <TextView style="@style/MetaText" android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:text="@string/classes_attended" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- Volley card: today's date fetched with Volley from a public REST API -->
+            <LinearLayout style="@style/Card" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_margin="4dp" android:layout_marginTop="8dp" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="@string/today_s_date" android:textColor="@color/muted" android:textSize="11sp"
+                    android:textStyle="bold" android:letterSpacing="0.12" />
+                <TextView android:id="@+id/tvCalTitle" style="@style/TitleText" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="@string/loading" />
+                <TextView android:id="@+id/tvCalMeta" style="@style/MetaText" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="2dp" />
+            </LinearLayout>
+
+            <TextView style="@style/TitleText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="6dp" android:layout_marginTop="16dp" android:layout_marginBottom="2dp"
+                android:text="@string/services" />
+
+            <!-- the service tiles: RecyclerView with a 2-column GridLayoutManager -->
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/tiles"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" android:overScrollMode="never" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnPortal"
+                style="?attr/materialButtonOutlinedStyle" android:layout_width="match_parent"
+                android:layout_height="52dp" android:layout_margin="4dp" android:layout_marginTop="14dp"
+                android:text="@string/kuet_website" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

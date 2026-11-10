@@ -1,0 +1,4 @@
+#Wed Nov 11 04:12:13 BDT 2026
+base.0=C\:\\Users\\User\\Downloads\\UniHub_updated (21)\\UniHub\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

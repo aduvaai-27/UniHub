@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/add_class" />
+            <TextView style="@style/HeaderSub" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/this_class_is_repeated_every" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/offline_add_bar" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint_course_code">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCourse"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="Class type" android:textStyle="bold" />
+            <RadioGroup android:id="@+id/rgType" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="4dp">
+                <RadioButton android:id="@+id/rbTheory" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Theory" />
+                <RadioButton android:id="@+id/rbSessional" android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:text="Sessional" />
+            </RadioGroup>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_teacher_name">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTeacher"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_room">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etRoom"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_day_of_the_week">
+                <AutoCompleteTextView android:id="@+id/acDay" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_applies_to">
+                <AutoCompleteTextView android:id="@+id/acGroup" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/start_time" android:textStyle="bold" />
+            <com.unihub.app.view.TimeWheel android:id="@+id/twStart"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+            <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/end_time" android:textStyle="bold" />
+            <com.unihub.app.view.TimeWheel android:id="@+id/twEnd"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="22dp" android:text="@string/save" android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

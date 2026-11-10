@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/assignments_and_exams" />
+            <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/posted_by_the_class_representative" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/offline_tasks_bar" />
+        <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/toggleType"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="14dp"
+            app:singleSelection="true" app:selectionRequired="true">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnAssign"
+                style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/assignments" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnExam"
+                style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/exams" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+        <TextView android:id="@+id/tvEmpty" style="@style/MetaText" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:gravity="center" android:padding="32dp"
+            android:textSize="15sp" android:visibility="gone" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:clipToPadding="false" android:padding="10dp" android:paddingBottom="96dp" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAdd" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end" android:layout_margin="20dp" android:text="@string/post"
+        android:textColor="@color/white" app:backgroundTint="?attr/colorPrimary" android:visibility="gone" />
+</FrameLayout>

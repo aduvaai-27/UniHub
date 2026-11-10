@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Contacts provider: pick a teacher's number from Contacts (asked at runtime) -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <!-- Profile picture: asked at runtime before the gallery opens -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <application
+        android:name=".UniHubApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.UniHub">
+
+        <activity android:name=".ui.LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.MainActivity" android:exported="false" />
+        <activity android:name=".ui.ChatActivity" android:parentActivityName=".ui.MainActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.RoutineActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.UpcomingActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.ClassChangeActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.AddRoutineActivity" android:parentActivityName=".ui.RoutineActivity" />
+        <activity android:name=".ui.TasksActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.AddTaskActivity" android:parentActivityName=".ui.TasksActivity" />
+        <activity android:name=".ui.NoticesActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.TeachersActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.HolidayActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.CalendarActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.StudentsActivity" android:parentActivityName=".ui.MainActivity" />
+        <activity android:name=".ui.AttendanceActivity" android:parentActivityName=".ui.MainActivity" />
+        <!-- Full-screen profile picture; opened from Home, Students and Teachers (photo permission is requested before choosing a picture) -->
+        <activity android:name=".ui.PhotoViewActivity" android:exported="false" />
+
+        <!-- Foreground service: live listener for notices, assignments and exams -->
+        <service
+            android:name=".service.NoticeService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="Receives notices, assignments and exam updates posted by the class representative" />
+        </service>
+
+        <receiver android:name=".receiver.ReminderReceiver" android:exported="false" />
+        <receiver android:name=".receiver.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <provider
+            android:name=".data.UniHubProvider"
+            android:authorities="com.unihub.app.provider"
+            android:exported="false" />
+    </application>
+</manifest>

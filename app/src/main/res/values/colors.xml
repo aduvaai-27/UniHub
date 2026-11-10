@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="navy">#0B2A4A</color>
+    <color name="navy_dark">#071C33</color>
+    <color name="navy_light">#17406E</color>
+    <color name="blue">#1F6FB2</color>
+    <color name="bg">#F3F5F8</color>
+    <color name="border">#D5DBE3</color>
+    <color name="ink">#1A2433</color>
+    <color name="body">#3C4858</color>
+    <color name="muted">#5F6B7A</color>
+    <color name="success">#1B7F4B</color>
+    <color name="warning">#B26A00</color>
+    <color name="danger">#B3261E</color>
+    <color name="plum">#6A4C93</color>
+    <color name="card">#FFFFFF</color>
+    <color name="track">#E3E8EF</color>
+    <color name="white">#FFFFFF</color>
+</resources>

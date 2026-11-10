@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Course summary card: name, level tag and counts on the left, the course's own attendance ring on the right. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_margin="6dp" android:orientation="horizontal" android:gravity="center_vertical"
+    android:background="@drawable/bg_card" android:padding="16dp">
+    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView android:id="@+id/tvName" style="@style/TitleText" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView android:id="@+id/tvStatus" style="@style/TagText"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+        <TextView android:id="@+id/tvStats" style="@style/MetaText"
+            android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" />
+    </LinearLayout>
+    <com.unihub.app.view.AttendanceRingView android:id="@+id/ring"
+        android:layout_width="84dp" android:layout_height="84dp" android:layout_marginStart="12dp" />
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Day header inside "Next 7 Days": the date, a Holiday / Weekend tag, and a short note. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginTop="18dp" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvDay" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:textColor="@color/ink" android:textSize="16sp" android:textStyle="bold" />
+        <TextView android:id="@+id/tvTag" style="@style/TagText" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:visibility="gone" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvNote" style="@style/MetaText" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginTop="4dp" android:visibility="gone" />
+</LinearLayout>

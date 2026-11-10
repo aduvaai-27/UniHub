@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingTop="56dp" android:paddingBottom="32dp">
+            <ImageView android:layout_width="84dp" android:layout_height="84dp" android:layout_marginBottom="14dp"
+                android:src="@drawable/unihub_logo" android:contentDescription="UniHub logo" />
+            <TextView style="@style/HeaderTitle" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/unihub" android:textSize="40sp" />
+            <TextView style="@style/HeaderSub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/khulna_university_of_engineering_technology" android:textSize="14sp" />
+            <TextView style="@style/HeaderSub" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:text="@string/class_routine_assignments_and_notices" />
+        </LinearLayout>
+        <!-- dark / light icon: same choice as the home screen, kept after login -->
+        <ImageView android:id="@+id/btnTheme" android:layout_width="40dp" android:layout_height="40dp"
+            android:layout_gravity="top|end" android:layout_marginTop="44dp" android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_outline_white" android:padding="9dp"
+            android:contentDescription="Switch between dark and light mode"
+            android:clickable="true" android:focusable="true" />
+        </FrameLayout>
+        <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/offline_login_bar" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="22dp">
+
+            <TextView android:id="@+id/tvFormTitle" style="@style/TitleText"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp" android:textSize="20sp" />
+
+            <TextView android:id="@+id/tvStatus" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_marginBottom="10dp"
+                android:textColor="@color/danger" android:textStyle="bold" android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutName"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp" android:hint="@string/hint_full_name" android:visibility="gone">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etName"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPersonName" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutId"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:hint="@string/hint_roll_number_2307001_2307123">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etId"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutPass"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_password" app:endIconMode="password_toggle">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etPassword"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutGroup"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_lab_group" android:visibility="gone">
+                <AutoCompleteTextView android:id="@+id/acGroup" android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout android:id="@+id/crExtras" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone">
+                <CheckBox android:id="@+id/cbCr" android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                    android:text="@string/i_am_the_class_representative" android:textColor="@color/ink" />
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/layoutCode"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:hint="@string/hint_cr_invitation_code" android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCode"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSubmit"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="20dp" android:textSize="16sp" />
+
+            <TextView android:id="@+id/tvSwitch" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:gravity="center" android:padding="16dp"
+                android:textColor="@color/blue" android:textStyle="bold" android:textSize="14sp"
+                android:clickable="true" android:focusable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

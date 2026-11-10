@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView android:id="@+id/tvHeader" style="@style/HeaderTitle"
+                android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView style="@style/HeaderSub" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/all_students_will_be_notified" />
+        </LinearLayout>
+        <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="@string/offline_add_bar" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/hint_title">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTitle"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_course_code_2">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etCourse"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="12dp" android:hint="@string/hint_details">
+                <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDetails"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textMultiLine" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView android:id="@+id/tvDateLabel" style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="14dp" android:layout_marginBottom="6dp" android:text="@string/deadline" android:textStyle="bold" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="0dp" android:layout_marginEnd="4dp" android:hint="@string/hint_day">
+                    <AutoCompleteTextView android:id="@+id/acDay" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="4dp" android:layout_marginEnd="4dp" android:hint="@string/hint_month">
+                    <AutoCompleteTextView android:id="@+id/acMonth" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:layout_marginStart="4dp" android:layout_marginEnd="0dp" android:hint="@string/hint_year">
+                    <AutoCompleteTextView android:id="@+id/acYear" android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:inputType="none" android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <TextView style="@style/MetaText" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/time" android:textStyle="bold" />
+            <com.unihub.app.view.TimeWheel android:id="@+id/twTime"
+                android:layout_width="match_parent" android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSave"
+                android:layout_width="match_parent" android:layout_height="52dp"
+                android:layout_marginTop="22dp" android:text="@string/post" android:textSize="16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

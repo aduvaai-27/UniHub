@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.UniHub" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryVariant">@color/navy_dark</item>
+        <item name="colorSecondary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/ink</item>
+        <item name="colorBackgroundFloating">@color/card</item>
+        <item name="android:textColorPrimary">@color/ink</item>
+        <item name="android:textColorSecondary">@color/muted</item>
+        <item name="android:statusBarColor">@color/navy_dark</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="materialButtonStyle">@style/Widget.UniHub.Button</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+</resources>

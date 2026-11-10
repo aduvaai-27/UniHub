@@ -1,0 +1,202 @@
+[
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_upcoming.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_upcoming.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_student.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_student.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_bg_card.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_bg_bubble_me.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/bg_bubble_me.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_chat.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_chat.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_session.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_session.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_class_change.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_class_change.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_unihub_logo.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/unihub_logo.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable-nodpi_default_avatar.png.flat",
+        "source": "com.unihub.app-main-42:/drawable-nodpi/default_avatar.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_bg_panel.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/bg_panel.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_add_task.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_add_task.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_ic_theme_light.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/ic_theme_light.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_task.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_task.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_routine.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_login.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_holiday.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_holiday.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_chat.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_chat.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_dialog_notice.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/dialog_notice.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_stat.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_stat.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_routine.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_teacher.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_teacher.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_day_head.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_day_head.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_attendance.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_attendance.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_ic_launcher.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/ic_launcher.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_calendar.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_calendar.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_photo_view.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_photo_view.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_class_change.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_class_change.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_teachers.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_teachers.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_tasks.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_tasks.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.unihub.app-main-42:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_notices.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_notices.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.unihub.app-main-42:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_students.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_students.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_tile.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_tile.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_add_routine.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_add_routine.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_activity_main.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_ic_theme_dark.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/ic_theme_dark.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/layout_item_notice.xml.flat",
+        "source": "com.unihub.app-main-42:/layout/item_notice.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/drawable_bg_outline_white.xml.flat",
+        "source": "com.unihub.app-main-42:/drawable/bg_outline_white.xml"
+    },
+    {
+        "merged": "com.unihub.app-debug-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.unihub.app-main-42:/mipmap-anydpi-v26/ic_launcher.xml"
+    }
+]

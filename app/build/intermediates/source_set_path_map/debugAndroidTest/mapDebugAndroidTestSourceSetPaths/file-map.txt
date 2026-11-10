@@ -1,0 +1,4 @@
+com.unihub.app.test.app-androidTest-0 C:\Users\User\Downloads\UniHub_updated (21)\UniHub\app\build\generated\res\resValues\androidTest\debug
+com.unihub.app.test.app-mergeDebugAndroidTestResources-1 C:\Users\User\Downloads\UniHub_updated (21)\UniHub\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.unihub.app.test.app-mergeDebugAndroidTestResources-2 C:\Users\User\Downloads\UniHub_updated (21)\UniHub\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.unihub.app.test.app-debugAndroidTest-3 C:\Users\User\Downloads\UniHub_updated (21)\UniHub\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,91 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{db}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function me() { return get(/databases/$(db)/documents/users/$(request.auth.uid)).data; }
+    function isStaff() { return signedIn() && me().role == 'cr'; }
+
+    // Bangladesh time = UTC + 6
+    function lt() { return request.time + duration.value(6, 'h'); }
+    function pad(n) { return n < 10 ? '0' + string(n) : string(n); }
+    function todayKey() { return string(lt().year()) + '-' + pad(lt().month()) + '-' + pad(lt().day()); }
+    // Calendar day (1 = Sunday ... 7 = Saturday) -> milliseconds after Thursday 00:00 in the weekly cycle
+    function dayOffset(c) { return ((c + 2) % 7) * 86400000; }
+
+    // Is this class running right now?
+    //  - weekly class: right weekday and right time
+    //  - extra class (has a "date"): right weekday and time AND today must be exactly that date
+    function inClass(routineId) {
+      let r = get(/databases/$(db)/documents/routine/$(routineId)).data;
+      let mins = lt().hours() * 60 + lt().minutes();
+      let w = lt().toMillis() % 604800000;
+      let oneDate = r.get('date', '');
+      let ended = r.get('endDate', '') != '' && todayKey() >= r.get('endDate', '');   // a removed weekly class
+      return !ended && mins >= r.startMin && mins < r.endMin
+          && w >= dayOffset(r.day) && w < dayOffset(r.day) + 86400000
+          && (oneDate == '' || oneDate == todayKey());
+    }
+
+    match /users/{uid} {
+      allow create: if signedIn() && request.auth.uid == uid;
+      allow update: if signedIn() && request.auth.uid == uid
+                    && request.resource.data.role == resource.data.role;
+      // only your own profile (Attendance Tracker no longer needs the CR to read every student)
+      allow read: if signedIn() && request.auth.uid == uid;
+    }
+    match /routine/{id}       { allow read: if signedIn(); allow write: if isStaff(); }
+    match /teacherCards/{id}  { allow read: if signedIn(); allow write: if isStaff(); }
+    match /students/{id}      { allow read: if signedIn(); allow write: if isStaff(); }
+    // a new assignment / exam must be due in the future (the app checks too)
+    match /tasks/{id}         { allow read: if signedIn();
+                                allow create: if isStaff() && request.resource.data.due > request.time.toMillis();
+                                allow update, delete: if isStaff(); }
+    match /notices/{id}       { allow read: if signedIn(); allow write: if isStaff(); }
+    match /cancellations/{id} { allow read: if signedIn(); allow write: if isStaff(); }
+    // NEW: holidays and vacations set by the CR (everyone reads them in the Calendar)
+    // a new holiday must start tomorrow or later (never today / the past). Editing (shortening) and deleting stay allowed.
+    match /holidays/{id} {
+      allow read: if signedIn();
+      allow create: if isStaff() && request.resource.data.startDate > todayKey();
+      allow update, delete: if isStaff();
+    }
+
+    // Profile pictures. Key: "s_<roll>" for a student / the CR, "t_<name>" for a teacher.
+    //   - everyone signed in can read
+    //   - the CR can set or remove any picture; a student only the picture with his or her own roll
+    //   - sizes match ProfilePhotos.java (thumbnail 40,000 characters, big picture 600,000 characters)
+    function photoWriter(key) { return isStaff() || key == 's_' + me().id; }
+
+    match /photoThumbs/{key} {
+      allow read: if signedIn();
+      allow create, update: if photoWriter(key)
+        && request.resource.data.keys().hasOnly(['thumb', 'updatedAt'])
+        && request.resource.data.thumb is string && request.resource.data.thumb.size() <= 40000
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if photoWriter(key);
+    }
+    match /photoFull/{key} {
+      allow read: if signedIn();
+      allow create, update: if photoWriter(key)
+        && request.resource.data.keys().hasOnly(['full', 'updatedAt'])
+        && request.resource.data.full is string && request.resource.data.full.size() <= 600000
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if photoWriter(key);
+    }
+
+    match /attendance/{id} {
+      // Attendance Tracker: everyone (student and CR) can read only their OWN attendance
+      allow read: if signedIn() && resource.data.uid == request.auth.uid;
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['uid','roll','name','group','date','routineId','sessionKey','course','markedAt'])
+        && request.resource.data.uid == request.auth.uid
+        && request.resource.data.roll == me().id
+        && request.resource.data.date == todayKey()
+        && id == request.resource.data.date + '_' + request.resource.data.routineId + '_' + request.resource.data.roll
+        && request.resource.data.markedAt == request.time
+        && inClass(request.resource.data.routineId);
+      allow update, delete: if false;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <LinearLayout style="@style/Header" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView style="@style/HeaderTitle" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="@string/attendance_tracker" />
+        <TextView android:id="@+id/tvSub" style="@style/HeaderSub" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView android:id="@+id/tvOffline" style="@style/OfflineBar" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="@string/offline_attendance_bar" />
+    <com.google.android.material.button.MaterialButtonToggleGroup android:id="@+id/toggleView"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="14dp"
+        app:singleSelection="true" app:selectionRequired="true">
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnToday"
+            style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/today" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSummary"
+            style="?attr/materialButtonOutlinedStyle" android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/summary" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+    <TextView android:id="@+id/tvEmpty" style="@style/MetaText" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:gravity="center" android:padding="32dp"
+        android:textSize="15sp" android:visibility="gone" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/recycler"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:clipToPadding="false" android:padding="10dp" android:paddingBottom="24dp" />
+</LinearLayout>
